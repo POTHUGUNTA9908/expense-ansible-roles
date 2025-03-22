@@ -1,4 +1,4 @@
-- name: Install and Configure Nginx for Frontend
+- name: Install and Configure Nginx for 
   hosts: frontend
   become: yes
   tasks:
