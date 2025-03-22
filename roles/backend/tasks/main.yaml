@@ -43,12 +43,12 @@
     dest: /etc/systemd/system/backend.service
   
 
-- name: Install Python MySQL dependencies
+- name: install python mysql dependencies
   ansible.builtin.pip:
     name:
-      - PyMySQL
+      - PyMySQL # to connect MySQL DB from Ansible
       - cryptography
-    executable: "{{ pip_executable }}"
+    executable: pip3.9
 
 - name: import data into mysql
   community.mysql.mysql_db:
